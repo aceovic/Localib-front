@@ -1,11 +1,21 @@
+import "./App.css";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ClientPage from "./pages/ClientPage";
+import VehiculePage from "./pages/VehiculePage";
+import LocationPage from "./pages/LocationPage";
 
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     Hello React !
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Clients" element={<ClientPage />} />
+        <Route path="/Vehicules" element={<VehiculePage />} />
+        <Route path="/Location" element={<LocationPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
